@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+}
+.login{
+    width: 100%;
+    background: #337ab7;
+}
+.login > h1{
+    padding-left: 8%;
+    color: #ffffff;
+}
+.login > form {
+    text-align: right;
+    color: #ffffff;
+}
+.btn-login{
+    color: #ffffff;
+    background-color: #337ab7;
+    margin-left: 4px;
+}
+.btn-login:hover{
+    color: #ffffff;
+    background-color: #337ac5;
+    border-color: #cccccc;
+}
+@media (max-width: 768px) {
+    .login > h1 {
+        text-align: center;
+    }
+    .login > form {
+        text-align: left;
+    }
+}
+.register{
+    float:right;
+}
+.warn{
+    font-size: 15px;
+    color: red;
+}
