@@ -28,13 +28,11 @@ if(isset($_POST['register_button'])){
 	//email
 	$em = strip_tags($_POST['reg_email']); //Remove html tags
 	$em = str_replace(' ', '', $em); //remove spaces
-	$em = ucfirst(strtolower($em)); //Uppercase first letter
 	$_SESSION['reg_email'] = $em; //Stores email into session variable
 
 	//email 2
 	$em2 = strip_tags($_POST['reg_email2']); //Remove html tags
 	$em2 = str_replace(' ', '', $em2); //remove spaces
-	$em2 = ucfirst(strtolower($em2)); //Uppercase first letter
 	$_SESSION['reg_email2'] = $em2; //Stores email2 into session variable
 
 	//Password
@@ -63,8 +61,6 @@ if(isset($_POST['register_button'])){
 		else {
 			array_push($error_array, "Invalid email format<br>");
 		}
-
-
 	}
 	else {
 		array_push($error_array, "Emails don't match<br>");
@@ -92,7 +88,6 @@ if(isset($_POST['register_button'])){
 		array_push($error_array, "Your password must be betwen 5 and 30 characters<br>");
 	}
 
-
 	if(empty($error_array)) {
 		//$password = md5($password); //Encrypt password before sending to database
 
@@ -117,9 +112,9 @@ if(isset($_POST['register_button'])){
 		else if($rand == 2)
 			$profile_pic = "assets/images/profile_pics/defaults/head_emerald.png";
 
-		$query = mysqli_query($con, "INSERT INTO users VALUES ('', '$fname', '$lname', '$username', '$em', '$password', '$date', 'no')");
+		$query = mysqli_query($con, "INSERT INTO users VALUES ('', '$fname', '$lname', '$username', '$em', '$password', '$date','images/profile_pics/defaults/head_emerald.png', 'no')");
 
-		array_push($error_array, "<span style='color: #14C800;'>You're all set! Goahead and login!</span><br>");
+		array_push($error_array, "You're all set! Goahead and login!<br>");
 
 		//Clear session variables 
 		$_SESSION['reg_fname'] = "";
@@ -127,6 +122,5 @@ if(isset($_POST['register_button'])){
 		$_SESSION['reg_email'] = "";
 		$_SESSION['reg_email2'] = "";
 	}
-
 }
 ?>
