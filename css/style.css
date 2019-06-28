@@ -23,8 +23,12 @@ body{
 }
 .btn-login:hover{
     color: #ffffff;
-    background-color: #337ac5;
+    background-color: #337ac8;
     border-color: #cccccc;
+}
+.register{
+    position: absolute;
+    width: 100%;
 }
 .warn{
     font-size: 15px;
@@ -32,17 +36,17 @@ body{
 }
 .error-box {
     background-color: #ff9f9f;
-    width:95%;
+    width:100%;
     border-radius: 7px;
     height: auto;
-    line-height: 50%;
 }
 .error-box > div {
-    padding: 10px 0px 10px 8px;
+    padding: 4px 4px 7px 8px;
+    font-family: Arial;
 }
 .error-box > p {
     background-color: #bbf7bf;
-    padding: 10px 0px 10px 8px;
+    padding: 10px 5px 10px 8px;
     border-radius: 7px;
 }
 @media (max-width: 767px) {
@@ -54,6 +58,9 @@ body{
     }
     .register {
         float: none;
-        width:100%;
+        width:95%;
+    }
+    .error-box {
+        width: 100%;
     }
 }
