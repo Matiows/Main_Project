@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
 }
 .login{
@@ -12,42 +12,55 @@ body{
 .login > form {
     text-align: right;
     color: #ffffff;
-}
-.pad {
-    padding-top: 6px;
+    padding-right: 3%;
+    line-height: 2em;
 }
 .btn-login{
-    color: #ffffff;
-    background-color: #337ab7;
-    margin-left: 4px;
+    margin-left: 5px;
+    background-color: #2860a0;
+    border: 0;
+    font-size: 1.1em;
+    font-family: Ebrima;
 }
-.btn-login:hover{
-    color: #ffffff;
-    background-color: #337ac8;
-    border-color: #cccccc;
+.error-login{
+    font-weight: bold;
+    margin-right: 30px;
 }
 .register{
-    position: absolute;
     width: 100%;
-}
-.warn{
-    font-size: 15px;
-    color: red;
 }
 .error-box {
     background-color: #ff9f9f;
     width:100%;
     border-radius: 7px;
-    height: auto;
 }
 .error-box > div {
-    padding: 4px 4px 7px 8px;
-    font-family: Arial;
+    padding: 4px 4px 4px 8px;
 }
 .error-box > p {
     background-color: #bbf7bf;
-    padding: 10px 5px 10px 8px;
+    padding: 5px 5px 5px 8px;
     border-radius: 7px;
+}
+.nav-head {
+    background-color: #337ab7;
+    color: #ffffff;
+    padding-left: 1em;
+ }
+.nav-head > ul {
+     margin: 0;
+ }
+.nav-head > ul > li {
+    margin: 0 0.5em;
+}
+.nav-head > ul >li > a {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0.7em;
+}
+.nav-profile {
+    height: 2em;
+    margin: -1em 0.5em -1em 0;
 }
 @media (max-width: 767px) {
     .login > h1 {
@@ -55,12 +68,63 @@ body{
     }
     .login > form {
         text-align: left;
+        margin: 0;
+        padding: 0;
     }
     .register {
-        float: none;
-        width:95%;
+        width: 95%;
     }
     .error-box {
+        width: 100%;
+    }
+    .btn-login {
+        margin-left: 0;
+    }
+    .nav-head {
+        background-color: #337ab7;
+        color: #ffffff;
+        padding: 0.5em 0 0 0;
+        margin: 0;
+        min-height: 2.9em;
+    }
+    .nav-head > div > a {
+        color: #ffffff;
+    }
+    .nav-head > div > ul > li > a {
+        color: #ffffff;
+        padding: 0;
+    }
+    .nav-profile {
+        height: 1.8em;
+    }
+    a.btn.xs-link {
+        padding: 0;
+        width: 130%;
+    }
+    a.btn.xs-link:focus,
+    a.btn.xs-link:active:focus,
+    a.btn.xs-link.active:focus {
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+    }
+    .nav .open > a.btn.xs-link,
+    .nav .open > a.btn.xs-link:hover,
+    .nav .open > a.btn.xs-link:focus,
+    a.btn.xs-link:hover,
+    a.btn.xs-link:focus {
+        color: #ffffff;
+        background-color: #2860a0;
+    }
+    .head-search {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 30px;
+        padding: 3px;
+    }
+}
+@media (max-width: 335px) {
+    #btn-doc,#btn-usr {
         width: 100%;
     }
 }
